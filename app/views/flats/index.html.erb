@@ -1,0 +1,41 @@
+
+<div class="page-container">
+
+  <h1>List of available flats</h1>
+
+  <div class="cards-grid">
+
+    <% @flats.each do |flat| %>
+
+    <div class="card-box">
+      <h2 class="card-title"> <%= flat.name %> </h2>
+
+      <div class="info-row">
+        <p class="bold-w-margin"> Address: </p>
+        <p> <%= flat.address %> </p>
+      </div>
+
+      <div class="info-row">
+        <p class="bold-w-margin"> Description: </p>
+        <p> <%= flat.description %> </p>
+      </div>
+
+      <div class="price-and-guests-row">
+        <div class="small-box">
+          <i class="fas fa-users"></i>
+          <p> <%= flat.number_of_guests %> pax.</p>
+        </div>
+
+        <div class="small-box">
+          <i class="fas fa-tags"></i>
+          <p> <%= flat.price_per_night %> € per night</p>
+        </div>
+      </div>
+
+    </div>
+
+    <% end %>
+
+  </div>
+
+</div>
